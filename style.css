@@ -1,10 +1,18 @@
 #grid {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 960px;
     height: 960px;
+    gap: 0;
+    align-items: stretch;
 }
 
-.square:hover {
+.hover {
     background-color: blue;
+
+}
+
+.square {
+    align-self: stretch;
 }

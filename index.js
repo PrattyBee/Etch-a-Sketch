@@ -7,6 +7,10 @@ for (let i = 1; i < 17; i++) {
   div.style.width = '25%';
   div.style.height = '200px';
   div.classList.add('square');
+  div.style.margin = '0';
+  div.addEventListener('mouseover', () => {
+    div.classList.add('hover');
+  })
   grid.appendChild(div);
 }
 
@@ -26,10 +30,21 @@ function createGrid(width, height) {
         let div = document.createElement('div');
         div.classList.add('square');
         div.textContent = `*`;
-        div.style.width = `${widthSize}px`;
+        div.style.width = `${widthSize}`;
         div.style.height = `${heightSize}px`;
         grid.appendChild(div);
     }
+    hover();
+}
+
+function hover() {
+    let divs = document.querySelectorAll('.square');
+    divs = Array.from(divs);
+    divs.forEach((element) => {
+        element.addEventListener('mouseover', () => {
+            element.classList.add('hover');
+        })
+    })
 }
 
 function changeGrid() {
