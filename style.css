@@ -1,12 +1,8 @@
 #grid {
     display: flex;
     flex-wrap: wrap;
-}
-
-.square {
-    width: 50%;
-    height: 470px;
-
+    width: 960px;
+    height: 960px;
 }
 
 .square:hover {
